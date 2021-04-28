@@ -1,0 +1,90 @@
+/tmp/tmp.NNqRKEiWiP/cmake-build-debug-remote-host/sim/dmc_sim -c /tmp/tmp.NNqRKEiWiP/sim/ai_platform/dmc_sim_631_best.conf
+[global]
+server_groups = 1
+client_groups = 1
+server_random_selection = 1
+server_soft_limit = 1
+anticipation_timeout = 0.000
+
+[client.0]
+client_count = 1
+client_wait = 0
+client_total_ops = 150000
+client_server_select_range = 20
+client_iops_goal = 3000
+client_outstanding_ops = 5
+client_reservation = 0.0
+client_limit = 0.0
+client_weight = 1.0
+
+[server.0]
+server_count = 1
+server_iops = 8000
+server_threads = 1
+
+simulation started
+simulation completed in 63779 millisecs
+==== Client Data ====
+     client:       0  total
+        t_0: 2468.00 2468.00
+        t_1: 2471.00 2471.00
+        t_2: 2533.50 2533.50
+        t_3: 2533.00 2533.00
+        t_4: 2532.00 2532.00
+        t_5: 2529.00 2529.00
+        t_6: 2408.00 2408.00
+        t_7: 2409.50 2409.50
+        t_8: 2410.50 2410.50
+        t_9: 2411.00 2411.00
+       t_10: 2408.50 2408.50
+       t_11: 2407.50 2407.50
+       t_12: 2196.50 2196.50
+       t_13: 2146.00 2146.00
+       t_14: 2150.50 2150.50
+       t_15: 2144.00 2144.00
+       t_16: 2151.00 2151.00
+       t_17: 2151.50 2151.50
+       t_18: 2150.50 2150.50
+       t_19: 2149.50 2149.50
+       t_20: 2151.50 2151.50
+       t_21: 2339.00 2339.00
+       t_22: 2530.00 2530.00
+       t_23: 2531.00 2531.00
+       t_24: 2528.00 2528.00
+       t_25: 2532.50 2532.50
+       t_26: 2530.00 2530.00
+       t_27: 2526.50 2526.50
+       t_28: 2529.50 2529.50
+       t_29: 2530.00 2530.00
+       t_30: 2524.00 2524.00
+       t_31:  987.00  987.00
+       t_32:    0.00    0.00
+    res_ops:       0       0
+   prop_ops:  150000  150000
+total time to track responses: 194479014 nanoseconds;
+    count: 150000;
+    average: 1296.53 nanoseconds per request/response
+total time to get request parameters: 237499554 nanoseconds;
+    count: 150000;
+    average: 1583.33 nanoseconds per request/response
+
+client timing for QOS algorithm: 2879.86 nanoseconds per request/response
+client 0's 95th latency: 1871
+
+==== Server Data ====
+     server:       0   total
+    res_ops:       0       0
+   prop_ops:  150000  150000
+
+ k-way heap: 2
+
+total time to add requests: 2570321681 nanoseconds;
+    count: 150000;
+    average: 17135.48 nanoseconds per request/response
+total time to note requests complete: 333950056 nanoseconds;
+    count: 150000;
+    average: 2226.33 nanoseconds per request/response
+
+server timing for QOS algorithm: 19361.81 nanoseconds per request/response
+
+Process finished with exit code 0

@@ -1,0 +1,78 @@
+/tmp/tmp.NNqRKEiWiP/cmake-build-debug-remote-host/sim/dmc_sim -c /tmp/tmp.NNqRKEiWiP/sim/ai_platform/dmc_sim_631_best.conf
+[global]
+server_groups = 1
+client_groups = 1
+server_random_selection = 1
+server_soft_limit = 1
+anticipation_timeout = 0.000
+
+[client.0]
+client_count = 1
+client_wait = 0
+client_total_ops = 150000
+client_server_select_range = 20
+client_iops_goal = 8000
+client_outstanding_ops = 5
+client_reservation = 0.0
+client_limit = 0.0
+client_weight = 1.0
+
+[server.0]
+server_count = 1
+server_iops = 8000
+server_threads = 1
+
+simulation started
+simulation completed in 39152 millisecs
+==== Client Data ====
+     client:       0  total
+        t_0: 4175.50 4175.50
+        t_1: 4929.50 4929.50
+        t_2: 5065.50 5065.50
+        t_3: 4180.00 4180.00
+        t_4: 3999.50 3999.50
+        t_5: 3927.50 3927.50
+        t_6: 3852.50 3852.50
+        t_7: 2584.00 2584.00
+        t_8: 2581.50 2581.50
+        t_9: 2586.00 2586.00
+       t_10: 2587.00 2587.00
+       t_11: 2587.50 2587.50
+       t_12: 2587.50 2587.50
+       t_13: 2587.50 2587.50
+       t_14: 3383.50 3383.50
+       t_15: 5110.50 5110.50
+       t_16: 5107.00 5107.00
+       t_17: 5106.50 5106.50
+       t_18: 5116.50 5116.50
+       t_19: 2945.00 2945.00
+       t_20:    0.00    0.00
+    res_ops:       0       0
+   prop_ops:  150000  150000
+total time to track responses: 194103371 nanoseconds;
+    count: 150000;
+    average: 1294.02 nanoseconds per request/response
+total time to get request parameters: 233655476 nanoseconds;
+    count: 150000;
+    average: 1557.70 nanoseconds per request/response
+
+client timing for QOS algorithm: 2851.73 nanoseconds per request/response
+client 0's 95th latency: 1519
+
+==== Server Data ====
+     server:       0   total
+    res_ops:       0       0
+   prop_ops:  150000  150000
+
+ k-way heap: 2
+
+total time to add requests: 2107972935 nanoseconds;
+    count: 150000;
+    average: 14053.15 nanoseconds per request/response
+total time to note requests complete: 253964808 nanoseconds;
+    count: 150000;
+    average: 1693.10 nanoseconds per request/response
+
+server timing for QOS algorithm: 15746.25 nanoseconds per request/response
+
+Process finished with exit code 0

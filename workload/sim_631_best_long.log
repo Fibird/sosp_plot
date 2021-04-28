@@ -1,0 +1,119 @@
+/tmp/tmp.NNqRKEiWiP/cmake-build-debug-remote-host/sim/dmc_sim -c /tmp/tmp.NNqRKEiWiP/sim/ai_platform/dmc_sim_631_best_long.conf
+[global]
+server_groups = 1
+client_groups = 1
+server_random_selection = 1
+server_soft_limit = 1
+anticipation_timeout = 0.000
+
+[client.0]
+client_count = 1
+client_wait = 0
+client_total_ops = 300000
+client_server_select_range = 20
+client_iops_goal = 3000
+client_outstanding_ops = 5
+client_reservation = 0.0
+client_limit = 0.0
+client_weight = 1.0
+
+[server.0]
+server_count = 1
+server_iops = 8000
+server_threads = 1
+
+simulation started
+simulation completed in 122981 millisecs
+==== Client Data ====
+     client:       0  total
+        t_0: 2465.50 2465.50
+        t_1: 2461.50 2461.50
+        t_2: 2527.50 2527.50
+        t_3: 2535.50 2535.50
+        t_4: 2533.00 2533.00
+        t_5: 2528.00 2528.00
+        t_6: 2411.50 2411.50
+        t_7: 2411.00 2411.00
+        t_8: 2412.00 2412.00
+        t_9: 2406.50 2406.50
+       t_10: 2409.50 2409.50
+       t_11: 2410.50 2410.50
+       t_12: 2205.50 2205.50
+       t_13: 2150.00 2150.00
+       t_14: 2146.50 2146.50
+       t_15: 2146.50 2146.50
+       t_16: 2149.00 2149.00
+       t_17: 2152.50 2152.50
+       t_18: 2152.00 2152.00
+       t_19: 2153.00 2153.00
+       t_20: 2153.00 2153.00
+       t_21: 2343.50 2343.50
+       t_22: 2534.00 2534.00
+       t_23: 2528.00 2528.00
+       t_24: 2534.00 2534.00
+       t_25: 2528.50 2528.50
+       t_26: 2532.00 2532.00
+       t_27: 2528.50 2528.50
+       t_28: 2532.00 2532.00
+       t_29: 2526.50 2526.50
+       t_30: 2526.50 2526.50
+       t_31: 2526.50 2526.50
+       t_32: 2526.00 2526.00
+       t_33: 2527.00 2527.00
+       t_34: 2534.00 2534.00
+       t_35: 2535.00 2535.00
+       t_36: 2535.00 2535.00
+       t_37: 2533.50 2533.50
+       t_38: 2532.00 2532.00
+       t_39: 2534.00 2534.00
+       t_40: 2535.50 2535.50
+       t_41: 2536.00 2536.00
+       t_42: 2535.50 2535.50
+       t_43: 2536.00 2536.00
+       t_44: 2535.50 2535.50
+       t_45: 2536.00 2536.00
+       t_46: 2530.50 2530.50
+       t_47: 2534.00 2534.00
+       t_48: 2535.00 2535.00
+       t_49: 2529.00 2529.00
+       t_50: 2536.00 2536.00
+       t_51: 2535.50 2535.50
+       t_52: 2535.00 2535.00
+       t_53: 2525.50 2525.50
+       t_54: 2534.00 2534.00
+       t_55: 2534.00 2534.00
+       t_56: 2535.00 2535.00
+       t_57: 2532.50 2532.50
+       t_58: 2533.00 2533.00
+       t_59: 2533.50 2533.50
+       t_60: 2506.50 2506.50
+       t_61:    0.00    0.00
+    res_ops:       0       0
+   prop_ops:  300000  300000
+total time to track responses: 378460770 nanoseconds;
+    count: 300000;
+    average: 1261.54 nanoseconds per request/response
+total time to get request parameters: 497521481 nanoseconds;
+    count: 300000;
+    average: 1658.40 nanoseconds per request/response
+
+client timing for QOS algorithm: 2919.94 nanoseconds per request/response
+client 0's 95th latency: 1494
+
+==== Server Data ====
+     server:       0   total
+    res_ops:       0       0
+   prop_ops:  300000  300000
+
+ k-way heap: 2
+
+total time to add requests: 4961638967 nanoseconds;
+    count: 300000;
+    average: 16538.80 nanoseconds per request/response
+total time to note requests complete: 604477407 nanoseconds;
+    count: 300000;
+    average: 2014.92 nanoseconds per request/response
+
+server timing for QOS algorithm: 18553.72 nanoseconds per request/response
+
+Process finished with exit code 0

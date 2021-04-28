@@ -1,0 +1,103 @@
+/tmp/tmp.NNqRKEiWiP/cmake-build-debug-remote-host/sim/dmc_sim -c /tmp/tmp.NNqRKEiWiP/sim/ai_platform/dmc_sim_631_reserv.conf
+[global]
+server_groups = 1
+client_groups = 1
+server_random_selection = 1
+server_soft_limit = 1
+anticipation_timeout = 0.000
+
+[client.0]
+client_count = 1
+client_wait = 0
+client_total_ops = 150000
+client_server_select_range = 10
+client_iops_goal = 2000
+client_outstanding_ops = 10
+client_reservation = 0.0
+client_limit = 0.0
+client_weight = 1.0
+
+[server.0]
+server_count = 1
+server_iops = 8000
+server_threads = 1
+
+simulation started
+simulation completed in 89553 millisecs
+==== Client Data ====
+     client:       0  total
+        t_0: 1778.50 1778.50
+        t_1: 1779.50 1779.50
+        t_2: 1512.00 1512.00
+        t_3: 1775.50 1775.50
+        t_4: 1775.00 1775.00
+        t_5: 1509.50 1509.50
+        t_6: 1775.50 1775.50
+        t_7: 1775.50 1775.50
+        t_8: 1508.50 1508.50
+        t_9: 1776.50 1776.50
+       t_10: 1776.50 1776.50
+       t_11: 1513.00 1513.00
+       t_12: 1778.50 1778.50
+       t_13: 1777.00 1777.00
+       t_14: 1512.00 1512.00
+       t_15: 1778.00 1778.00
+       t_16: 1778.00 1778.00
+       t_17: 1511.00 1511.00
+       t_18: 1778.00 1778.00
+       t_19: 1778.50 1778.50
+       t_20: 1512.00 1512.00
+       t_21: 1780.00 1780.00
+       t_22: 1780.00 1780.00
+       t_23: 1513.00 1513.00
+       t_24: 1780.00 1780.00
+       t_25: 1779.00 1779.00
+       t_26: 1511.50 1511.50
+       t_27: 1776.00 1776.00
+       t_28: 1779.00 1779.00
+       t_29: 1512.50 1512.50
+       t_30: 1779.50 1779.50
+       t_31: 1779.00 1779.00
+       t_32: 1513.00 1513.00
+       t_33: 1779.50 1779.50
+       t_34: 1779.50 1779.50
+       t_35: 1513.00 1513.00
+       t_36: 1775.50 1775.50
+       t_37: 1777.00 1777.00
+       t_38: 1511.00 1511.00
+       t_39: 1780.00 1780.00
+       t_40: 1780.00 1780.00
+       t_41: 1512.50 1512.50
+       t_42: 1778.50 1778.50
+       t_43: 1780.00 1780.00
+       t_44:  492.50  492.50
+       t_45:    0.00    0.00
+    res_ops:       0       0
+   prop_ops:  150000  150000
+total time to track responses: 177144646 nanoseconds;
+    count: 150000;
+    average: 1180.96 nanoseconds per request/response
+total time to get request parameters: 221253479 nanoseconds;
+    count: 150000;
+    average: 1475.02 nanoseconds per request/response
+
+client timing for QOS algorithm: 2655.99 nanoseconds per request/response
+client 0's 95th latency: 1702
+
+==== Server Data ====
+     server:       0   total
+    res_ops:       0       0
+   prop_ops:  150000  150000
+
+ k-way heap: 2
+
+total time to add requests: 2528023909 nanoseconds;
+    count: 150000;
+    average: 16853.49 nanoseconds per request/response
+total time to note requests complete: 304324868 nanoseconds;
+    count: 150000;
+    average: 2028.83 nanoseconds per request/response
+
+server timing for QOS algorithm: 18882.33 nanoseconds per request/response
+
+Process finished with exit code 0

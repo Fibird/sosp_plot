@@ -1,0 +1,176 @@
+/tmp/tmp.NNqRKEiWiP/cmake-build-debug-remote-host/sim/dmc_sim -c /tmp/tmp.NNqRKEiWiP/sim/131_test/dmc_sim_burst.conf
+[global]
+server_groups = 1
+client_groups = 1
+server_random_selection = 1
+server_soft_limit = 0
+anticipation_timeout = 0.000
+
+[client.0]
+client_count = 1
+client_wait = 0
+client_total_ops = 600000
+client_server_select_range = 10
+client_iops_goal = 7000
+client_outstanding_ops = 500
+client_reservation = 0.0
+client_limit = 0.0
+client_weight = 1.0
+
+[server.0]
+server_count = 1
+server_iops = 8000
+server_threads = 1
+
+simulation started
+simulation completed in 227585 millisecs
+==== Client Data ====
+     client:       0  total
+        t_0: 5003.50 5003.50
+        t_1: 5037.00 5037.00
+        t_2: 5013.50 5013.50
+        t_3: 4855.00 4855.00
+        t_4: 4950.50 4950.50
+        t_5: 5031.50 5031.50
+        t_6:  109.50  109.50
+        t_7:    0.00    0.00
+        t_8:    0.00    0.00
+        t_9:    0.00    0.00
+       t_10:    0.00    0.00
+       t_11:    0.00    0.00
+       t_12: 4877.50 4877.50
+       t_13: 4879.50 4879.50
+       t_14: 4876.50 4876.50
+       t_15: 5059.50 5059.50
+       t_16: 5093.00 5093.00
+       t_17: 5072.00 5072.00
+       t_18:  142.00  142.00
+       t_19:    0.00    0.00
+       t_20:    0.00    0.00
+       t_21:    0.00    0.00
+       t_22:    0.00    0.00
+       t_23:    0.00    0.00
+       t_24: 4890.50 4890.50
+       t_25: 4992.50 4992.50
+       t_26: 4879.00 4879.00
+       t_27: 5003.50 5003.50
+       t_28: 4966.50 4966.50
+       t_29: 4877.00 4877.00
+       t_30:  391.00  391.00
+       t_31:    0.00    0.00
+       t_32:    0.00    0.00
+       t_33:    0.00    0.00
+       t_34:    0.00    0.00
+       t_35:    0.00    0.00
+       t_36: 4476.50 4476.50
+       t_37: 4886.00 4886.00
+       t_38: 4964.50 4964.50
+       t_39: 5005.50 5005.50
+       t_40: 4947.50 4947.50
+       t_41: 4961.00 4961.00
+       t_42:  759.00  759.00
+       t_43:    0.00    0.00
+       t_44:    0.00    0.00
+       t_45:    0.00    0.00
+       t_46:    0.00    0.00
+       t_47:    0.00    0.00
+       t_48: 4311.50 4311.50
+       t_49: 5060.00 5060.00
+       t_50: 5013.50 5013.50
+       t_51: 5059.00 5059.00
+       t_52: 5070.00 5070.00
+       t_53: 4923.50 4923.50
+       t_54:  562.50  562.50
+       t_55:    0.00    0.00
+       t_56:    0.00    0.00
+       t_57:    0.00    0.00
+       t_58:    0.00    0.00
+       t_59:    0.00    0.00
+       t_60: 4508.50 4508.50
+       t_61: 5082.00 5082.00
+       t_62: 5073.00 5073.00
+       t_63: 5041.50 5041.50
+       t_64: 5079.50 5079.50
+       t_65: 5065.50 5065.50
+       t_66:  150.00  150.00
+       t_67:    0.00    0.00
+       t_68:    0.00    0.00
+       t_69:    0.00    0.00
+       t_70:    0.00    0.00
+       t_71:    0.00    0.00
+       t_72: 4928.50 4928.50
+       t_73: 4931.50 4931.50
+       t_74: 5072.50 5072.50
+       t_75: 5081.50 5081.50
+       t_76: 5031.00 5031.00
+       t_77: 4856.00 4856.00
+       t_78:   99.00   99.00
+       t_79:    0.00    0.00
+       t_80:    0.00    0.00
+       t_81:    0.00    0.00
+       t_82:    0.00    0.00
+       t_83:    0.00    0.00
+       t_84: 4969.50 4969.50
+       t_85: 5081.00 5081.00
+       t_86: 5070.50 5070.50
+       t_87: 5086.50 5086.50
+       t_88: 5074.50 5074.50
+       t_89: 4718.00 4718.00
+       t_90:    0.00    0.00
+       t_91:    0.00    0.00
+       t_92:    0.00    0.00
+       t_93:    0.00    0.00
+       t_94:    0.00    0.00
+       t_95:  355.00  355.00
+       t_96: 5097.50 5097.50
+       t_97: 5100.00 5100.00
+       t_98: 5080.50 5080.50
+       t_99: 5096.00 5096.00
+      t_100: 5021.00 5021.00
+      t_101: 4250.00 4250.00
+      t_102:    0.00    0.00
+      t_103:    0.00    0.00
+      t_104:    0.00    0.00
+      t_105:    0.00    0.00
+      t_106:    0.00    0.00
+      t_107:  846.50  846.50
+      t_108: 5054.00 5054.00
+      t_109: 4999.00 4999.00
+      t_110: 4965.00 4965.00
+      t_111: 5012.00 5012.00
+      t_112: 5101.00 5101.00
+      t_113: 4022.00 4022.00
+      t_114:    0.00    0.00
+    res_ops:       0       0
+   prop_ops:  600000  600000
+total time to track responses: 691714161 nanoseconds;
+    count: 600000;
+    average: 1152.86 nanoseconds per request/response
+total time to get request parameters: 833155209 nanoseconds;
+    count: 600000;
+    average: 1388.59 nanoseconds per request/response
+
+client timing for QOS algorithm: 2541.45 nanoseconds per request/response
+client 0's 95th latency: 1759, 19724, 20825
+client 0's 99th latency: 1929, 25287, 29396
+client 0's max latency: 49316, 533958, 537669
+client 0's average latency: 1152, 505, 1658
+
+
+==== Server Data ====
+     server:       0   total
+    res_ops:       0       0
+   prop_ops:  600000  600000
+
+ k-way heap: 2
+
+total time to add requests: 7565238532 nanoseconds;
+    count: 600000;
+    average: 12608.73 nanoseconds per request/response
+total time to note requests complete: 2465312374 nanoseconds;
+    count: 600000;
+    average: 4108.85 nanoseconds per request/response
+
+server timing for QOS algorithm: 16717.58 nanoseconds per request/response
+
+Process finished with exit code 0

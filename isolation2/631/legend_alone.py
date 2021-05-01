@@ -16,7 +16,7 @@ def io_plot(save_img=False):
              'weight': 'normal',
              'size': font_size,
              }
-    fig = plt.figure(figsize=(32, 0.5))
+    fig = plt.figure(figsize=(16, 0.5))
     ax1 = fig.add_subplot(111)
 
     for i in range(3):

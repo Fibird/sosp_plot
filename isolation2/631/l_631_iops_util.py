@@ -29,14 +29,10 @@ def get_data_from_sim(file_name):
 
 def io_plot(plot_data, save_img=False):
     font_name = 'Arial'
-    font_size = 16
+    font_size = 18
     fig, axes = plt.subplots(nrows=2, ncols=1, sharex='col',
                              gridspec_kw={'height_ratios': [2, 1]},
-                             figsize=(8, 6))
-    # gs = gridspec.GridSpec(2, 1, height_ratios=[2, 1])
-
-    # the first subplot
-    # ax = plt.subplot(gs[0])
+                             figsize=(8, 5))
     ax1 = axes[0]
     ax2 = axes[1]
     xs = np.arange(0, len(plot_data[0]), 1)
@@ -47,8 +43,6 @@ def io_plot(plot_data, save_img=False):
             ax1.plot(xs, ys, linewidth=1, color=color_styles[count], linestyle=linestyles[count], marker=markers[count], label=client_labels[count])
         count = count + 1
 
-    ax1.plot([-1], [-1], linewidth=1, color='black', label='system utilization')
-
     count = 3
     # ax2 = plt.subplot(gs[1], sharex=ax)
     utils = np.array(plot_data[count]) / 5100
@@ -56,20 +50,16 @@ def io_plot(plot_data, save_img=False):
     ax2.fill_between(xs, 0, utils, alpha=.3)
     ax1.axhline(1200, linestyle=':', linewidth=1, color='k')
 
-    # ax.xaxis.set_major_locator(plt.MultipleLocator(50))
-    #ax.yaxis.set_major_locator(plt.MultipleLocator(10))
     ax1.set(xlim=(0, 130), ylim=(0, 5200))
-    ax1.tick_params(direction='in')
-    ax2.tick_params(direction='in')
+    ax1.tick_params(direction='in', labelsize=16)
+    ax2.tick_params(direction='in', labelsize=16)
     ax1.grid(axis='y', color='0.7', linestyle=':')
-    # ax.legend(loc='center right')
 
     font1 = {'family': font_name,
              'weight': 'normal',
              'size': font_size,
              }
 
-    ax1.legend(ncol=4, loc='upper center', bbox_to_anchor=(0.5, 1.15))
     # plt.yticks(list(plt.yticks()[0]) + [1200])
 
     ax2.set_xlabel("Time (sec)", font1)
@@ -79,8 +69,6 @@ def io_plot(plot_data, save_img=False):
 
     labels = ax1.get_xticklabels() + ax1.get_yticklabels() + ax2.get_xticklabels() + ax2.get_yticklabels()
     [label.set_fontname(font_name) for label in labels]
-    ax1.tick_params(labelsize=font_size)
-    ax2.tick_params(labelsize=font_size)
 
     plt.grid(axis='y', color='0.7', linestyle=':')
     # plt.setp(ax1.get_xticklabels(), visible=False)

@@ -79,38 +79,30 @@ def io_plot(plot_data, save_img=False):
 
 if __name__ == '__main__':
     plt.rc('font', family='Arial')
-    labels = ['Reservation policy', 'Burst policy', 'Best-effort policy']
+    labels = ['Reservation Policy', 'Burst Policy', 'Best-effort Policy']
     # methods = ['', 'Reservation App', 'Burst App', 'Best-effort App', '']
     x = np.arange(len(labels))  # the label locations
     width = 0.2  # the width of the bars
     fig, ax = plt.subplots(figsize=(4, 5))
 
-    reserve = [24258.0, 27425.0, 39498.0]; rx = [1 - width, 1, 1+width]
+    reserve = [24258.0/1000.0, 27425.0/1000.0, 39498.0/1000.0]; rx = [1 - width, 1, 1+width]
     burst = [73.0, 62, 66.0]; bx = [2 - width, 2, 2+width]
     best = [98.0, 300.0, 300.0]; bex = [3 - width, 3, 3+width]
 
     # rx = np.array([0])
     rects1 = ax.bar(x, reserve, width, color='#93cf93', edgecolor='black')
 
-    # gx = np.array([2, 3])
-    # g1 = [73, 98.0]
-    # g2 = [62, 98.0]
-    # g3 = [66.0, 98.0]
-    #
-    # rects1 = ax2.bar(gx - width, g1, width, color='#93cf93', hatch='//', edgecolor='black', label=labels[0])
-    # rects2 = ax2.bar(gx, g2, width, color='#eb9192', hatch='oo', edgecolor='black', label=labels[1])
-    # rects3 = ax2.bar(gx + width, g3, width, color='#f2bae0', hatch='--', edgecolor='black', label=labels[2])
-    ax.set_ylabel('$95^{th}$ Latency($\mu$s)', fontsize=14)
+    ax.set_ylabel('$95^{th}$ Latency($\mu$s)', fontsize=16)
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
-    # ax2.set_ylabel('Complete Time(s)', fontsize=14)
-    # ax2.set_xticks(x)
+    plt.tick_params(axis='x', labelsize=16)
+    plt.tick_params(axis='y', labelsize=16)
+    plt.xticks(rotation=15)
 
     # ax.legend(ncol=3, loc='upper center', bbox_to_anchor=(0.5, 1.15))
-
     # ax.yaxis.set_major_locator(plt.MultipleLocator(50))
     plt.grid(axis="y")
     fig.tight_layout()
 
-    plt.savefig("envy_free_r2b.svg")
+    plt.savefig("fairness_reserve_r2b.svg")
     plt.show()

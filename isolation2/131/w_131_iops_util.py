@@ -54,7 +54,7 @@ def io_plot(plot_data, save_img=False):
     #ax.yaxis.set_major_locator(plt.MultipleLocator(10))
     ax1.set(xlim=(0, 140), ylim=(0, 5200))
     ax1.locator_params(axis='y', nbins=6)
-    ax1.locator_params(axis='x', nbins=8)
+    ax1.locator_params(axis='x', nbins=6)
     ax2.locator_params(axis='y', nbins=3)
     ax1.tick_params(direction='in', labelsize=font_size)
     ax2.tick_params(direction='in', labelsize=font_size)

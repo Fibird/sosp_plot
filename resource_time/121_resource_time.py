@@ -41,7 +41,14 @@ def stat_resource_time(raw_data):
 def to_percent(temp, position):
     return '%1.0f'%(100*temp) + '%'
 
+font_name = 'Arial'
+font_size = 20
 plt.rc('font', family='Arial')
+font1 = {'family': font_name,
+         'weight': 'normal',
+         'size': font_size,
+         }
+fig, ax = plt.subplots(figsize=(8, 5))
 
 standard_values = [5000.0 * win_size * 0.6 / 3600.0, 5000.0 * win_size * 0.3 / 3600.0, 5000.0 * win_size * 0.1 / 3600]
 datas = get_data_from_sim("../isolation2/121/r2b_iops.log")
@@ -110,13 +117,13 @@ Top = (target_ratio[2], r2b_rts[2] / total_rt, rw_rts[2] / total_rt, wl_rts[2] /
 Other = 1 - np.array(Top) - np.array(Bottom) - np.array(Center)
 
 for a, b in zip(ind, Bottom):
-    plt.text(a, b / 2 - 0.03, '%.1f' % (b * 100), ha='center', va='bottom', fontsize=14)
+    plt.text(a, b / 2 - 0.03, '%.1f' % (b * 100), ha='center', va='bottom', fontsize=font_size)
 for a, b in zip(ind, Center):
-    plt.text(a, (Center[a] + Bottom[a] * 2) / 2 - 0.03, '%.1f' % (b * 100), ha='center', va='bottom', fontsize=14)
+    plt.text(a, (Center[a] + Bottom[a] * 2) / 2 - 0.03, '%.1f' % (b * 100), ha='center', va='bottom', fontsize=font_size)
 for a, b in zip(ind, Top):
-    plt.text(a, (1 - Other[a] + Bottom[a] + Center[a]) / 2 - 0.03, '%.1f' % (b * 100), ha='center', va='bottom', fontsize=14)
+    plt.text(a, (1 - Other[a] + Bottom[a] + Center[a]) / 2 - 0.03, '%.1f' % (b * 100), ha='center', va='bottom', fontsize=font_size)
 for a, b in zip(ind, Other):
-    plt.text(a, (1 + Top[a] + Bottom[a] + Center[a]) / 2 - 0.03, '%.1f' % (b * 100), ha='center', va='bottom', fontsize=14)
+    plt.text(a, (1 + Top[a] + Bottom[a] + Center[a]) / 2 - 0.03, '%.1f' % (b * 100), ha='center', va='bottom', fontsize=font_size)
 
 d = []
 for i in range(0, len(Bottom)):
@@ -133,6 +140,9 @@ p4 = plt.bar(ind, Other, width, bottom=d, color=color_styles[3])
 plt.gca().yaxis.set_major_formatter(ticker.FuncFormatter(to_percent))
 plt.axhline(0.75, linestyle=':', color='k')
 plt.axhline(0.25, linestyle=':', color='k')
+ax.locator_params(axis='y', nbins=6)
+ax.tick_params(direction='in', labelsize=font_size)
+plt.xticks(rotation=30)
 
 plt.ylim((0, 1))
 # plt.legend((p1[0], p2[0], p3[0], p4[0]), labels, ncol=2, loc='center', bbox_to_anchor=(0.5, 0.65))

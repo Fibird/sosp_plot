@@ -29,7 +29,7 @@ def get_data_from_sim(file_name):
 
 def io_plot(plot_data, save_img=False):
     font_name = 'Arial'
-    font_size = 18
+    font_size = 28
     fig, axes = plt.subplots(nrows=2, ncols=1, sharex='col',
                              gridspec_kw={'height_ratios': [2, 1]},
                              figsize=(8, 5))
@@ -46,7 +46,7 @@ def io_plot(plot_data, save_img=False):
     count = 3
     # ax2 = plt.subplot(gs[1], sharex=ax)
     utils = np.array(plot_data[count]) / 5100
-    ax2.plot(xs, utils, linewidth=1, color='black', label='system utilization')
+    ax2.plot(xs, utils, linewidth=1, color='black', label='utilization')
     ax2.plot(0, [1.0], linewidth=0.1, color='black')
     ax2.fill_between(xs, 0, utils, alpha=.3)
     ax1.axhline(2000, linestyle=':', linewidth=1, color='k')
@@ -54,8 +54,11 @@ def io_plot(plot_data, save_img=False):
     # ax.xaxis.set_major_locator(plt.MultipleLocator(50))
     #ax.yaxis.set_major_locator(plt.MultipleLocator(10))
     ax1.set(xlim=(0, 140), ylim=(0, 5200))
-    ax1.tick_params(direction='in', labelsize=16)
-    ax2.tick_params(direction='in', labelsize=16)
+    ax1.locator_params(axis='y', nbins=6)
+    ax1.locator_params(axis='x', nbins=8)
+    ax2.locator_params(axis='y', nbins=3)
+    ax1.tick_params(direction='in', labelsize=font_size)
+    ax2.tick_params(direction='in', labelsize=font_size)
     ax1.grid(axis='y', color='0.7', linestyle=':')
     # ax.legend(loc='center right')
 
@@ -69,7 +72,7 @@ def io_plot(plot_data, save_img=False):
 
     ax2.set_xlabel("Time (sec)", font1)
     ax1.set_ylabel("IOPS", font1)
-    ax2.set_ylabel("System Utilization", font1)
+    ax2.set_ylabel("Utilization", font1)
     fig.tight_layout()
 
     labels = ax1.get_xticklabels() + ax1.get_yticklabels() + ax2.get_xticklabels() + ax2.get_yticklabels()

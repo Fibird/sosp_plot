@@ -33,8 +33,8 @@ if __name__ == '__main__':
              'size': font_size,
              }
 
-    plot_datas = get_data_from_csv('./121_score.csv')
-    baseline = [1.0, 113.0, 120.0, 22285.0]
+    plot_datas = get_data_from_csv('./631_score.csv')
+    baseline = [1.0, 114.0, 99.0, 21561.0]
 
     labels = ['Burst application', 'Reservation application', 'Best-effort application', 'Total']
 
@@ -60,7 +60,7 @@ if __name__ == '__main__':
         best.append(baseline[2] / data[2])
         total.append(data[0] + baseline[3] / data[3] + baseline[1] / data[1] + baseline[2] / data[2])
 
-    methods = ['L', 'R', 'R+L', 'W', 'W+L', 'R+W+L', 'R+W', 'R2B']
+    methods = ['R', 'R+W+L', 'W+L', 'W', 'L', 'R+L', 'R+W', 'R2B']
     x = np.arange(len(methods))  # the label locations
     reserve.sort()
     rects2 = ax0.barh(x, reserve, width, color='#a6cee3', edgecolor='black')
@@ -69,9 +69,9 @@ if __name__ == '__main__':
     ax0.xaxis.set_ticks_position('top')
     ax0.tick_params(direction='in', labelsize=font_size)
     ax0.set_xlabel("R's IOPS Score", fontsize=font_size)
-    ax0.set(xlim=(0.7, 1.0))
+    ax0.set(xlim=(0.5, 1.0))
 
-    methods = ['R', 'R+L', 'L',  'R+W+L', 'W+L', 'R+W', 'R2B', 'W']
+    methods = ['R+W+L', 'W+L', 'W', 'L', 'R+L', 'R', 'R+W', 'R2B']
     x = np.arange(len(methods))  # the label locations
     reserve1.sort()
     rects2 = ax1.barh(x, reserve1, width, color='#a6cee3', edgecolor='black')
@@ -80,12 +80,12 @@ if __name__ == '__main__':
     ax1.xaxis.set_ticks_position('top')
     ax1.tick_params(direction='in', labelsize=font_size)
     ax1.set_xlabel("R's $95^{th}$ Latency Score", fontsize=font_size)
-    ax1.set(xlim=(0.3, 1.0))
+    ax1.set(xlim=(0.5, 0.9))
     # rects2 = ax.barh(x - width * 0.5, reserve, width, color='#1f78b4', hatch='oo', edgecolor='black', label=labels[1])
     # rects3 = ax.barh(x + width * 0.5, best, width, color='#b2df8a', hatch='--', edgecolor='black',  label=labels[2])
     # rects4 = ax.barh(x + width * 1.5, total, width, color='#33a02c', hatch='x', edgecolor='black',  label=labels[3])
 
-    methods = ['R', 'W', 'W+L', 'R+W+L', 'L', 'R+L', 'R+W', 'R2B']
+    methods = ['R+W+L', 'R+W', 'W+L', 'W', 'L', 'R+L', 'R2B', 'R']
     x = np.arange(len(methods))  # the label locations
     burst.sort()
     rects2 = ax2.barh(x, burst, width, color='#a6cee3', edgecolor='black')
@@ -94,9 +94,9 @@ if __name__ == '__main__':
     ax2.xaxis.set_ticks_position('top')
     ax2.tick_params(direction='in', labelsize=font_size)
     ax2.set_xlabel("B's Complete Time Score", fontsize=font_size)
-    ax2.set(xlim=(0.3, 0.5))
+    ax2.set(xlim=(0.5, 1.0))
 
-    methods = ['R', 'R+L', 'L', 'R+W+L', 'W+L', 'R2B', 'R+W', 'W']
+    methods = ['R+W+L', 'W+L', 'W', 'L', 'R+L', 'R', 'R+W', 'R2B']
     x = np.arange(len(methods))  # the label locations
     best.sort()
     rects1 = ax3.barh(x, best, width, color='#a6cee3', edgecolor='black')
@@ -105,7 +105,7 @@ if __name__ == '__main__':
     ax3.xaxis.set_ticks_position('top')
     ax3.tick_params(direction='in', labelsize=font_size)
     ax3.set_xlabel("BE's Complete Time Score", fontsize=font_size)
-    ax3.set(xlim=(0.3, 0.8))
+    ax3.set(xlim=(0.0, 0.7))
     # ax0.xaxis.set_ticks_position('top')
     # ax0.tick_params(direction='in', labelsize=font_size)
     # ax0.set_xlabel('Best-effort Score', fontsize=font_size)
@@ -119,5 +119,5 @@ if __name__ == '__main__':
     ax3.grid(axis='x', color='0.7', linestyle=':')
     fig.tight_layout()
 
-    plt.savefig("131_score.svg")
+    plt.savefig("631_score.svg")
     plt.show()

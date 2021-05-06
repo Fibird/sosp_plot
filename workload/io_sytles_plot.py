@@ -38,12 +38,12 @@ def io_plot(plot_data, save_img=False):
 
     # ax.xaxis.set_major_locator(plt.MultipleLocator(50))
     #ax.yaxis.set_major_locator(plt.MultipleLocator(10))
-    ax.set(xlim=(0, len(xs) - 1), ylim=(0, 4000))
+    ax.set(xlim=(0, len(xs) - 1), ylim=(0, None))
     # ax.legend(loc='center right')
 
     font1 = {'family': 'Arial',
              'weight': 'normal',
-             'size': 32,
+             'size': 48,
              }
     ncol = int(math.ceil(6/2.))
     # plt.legend(ncol=ncol, loc='upper center', prop=font1)
@@ -53,17 +53,19 @@ def io_plot(plot_data, save_img=False):
     [label.set_fontname('Arial') for label in labels]
     ax.set_xlabel("Time (sec)", font1)
     ax.set_ylabel("IOPS", font1)
-    plt.tick_params(labelsize=16)
+    plt.tick_params(labelsize=48)
     plt.yticks([])
     plt.xticks([])
 
+    fig.tight_layout()
+
     if save_img:
         date_str = datetime.now().strftime("%y%m%d%H%M%S")
-        plt.savefig("sim_reserve_long_iops.svg")
+        plt.savefig("sim_burst_long_iops.svg")
     plt.show()
 
 
 if __name__ == '__main__':
-    data = get_data_from_sim("sim_631_reserve_long_iops.log")
+    data = get_data_from_sim("sim_631_burst_long_iops.log")
     io_plot(data, True)
     # print(data)

@@ -68,7 +68,7 @@ if __name__ == '__main__':
     ax0.set_yticklabels(methods)
     ax0.xaxis.set_ticks_position('top')
     ax0.tick_params(direction='in', labelsize=font_size)
-    ax0.set_xlabel("R's IOPS Score", fontsize=font_size)
+    ax0.set_xlabel("Rs' IOPS Score", fontsize=font_size)
     ax0.set(xlim=(0.5, 1.0))
 
     methods = ['R+W+L', 'W+L', 'W', 'L', 'R+L', 'R', 'R+W', 'R2B']
@@ -79,7 +79,7 @@ if __name__ == '__main__':
     ax1.set_yticklabels(methods)
     ax1.xaxis.set_ticks_position('top')
     ax1.tick_params(direction='in', labelsize=font_size)
-    ax1.set_xlabel("R's $95^{th}$ Latency Score", fontsize=font_size)
+    ax1.set_xlabel("Rs' $95^{th}$ Latency Score", fontsize=font_size)
     ax1.set(xlim=(0.5, 0.9))
     # rects2 = ax.barh(x - width * 0.5, reserve, width, color='#1f78b4', hatch='oo', edgecolor='black', label=labels[1])
     # rects3 = ax.barh(x + width * 0.5, best, width, color='#b2df8a', hatch='--', edgecolor='black',  label=labels[2])
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     ax2.set_yticklabels(methods)
     ax2.xaxis.set_ticks_position('top')
     ax2.tick_params(direction='in', labelsize=font_size)
-    ax2.set_xlabel("B's Complete Time Score", fontsize=font_size)
+    ax2.set_xlabel("Bs' Complete Time Score", fontsize=font_size)
     ax2.set(xlim=(0.5, 1.0))
 
     methods = ['R+W+L', 'W+L', 'W', 'L', 'R+L', 'R', 'R+W', 'R2B']
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     ax3.set_yticklabels(methods)
     ax3.xaxis.set_ticks_position('top')
     ax3.tick_params(direction='in', labelsize=font_size)
-    ax3.set_xlabel("BE's Complete Time Score", fontsize=font_size)
+    ax3.set_xlabel("BEs' Complete Time Score", fontsize=font_size)
     ax3.set(xlim=(0.0, 0.7))
     # ax0.xaxis.set_ticks_position('top')
     # ax0.tick_params(direction='in', labelsize=font_size)
